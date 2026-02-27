@@ -107,7 +107,7 @@ export default function ProjectModal({ projectId, isOpen, onClose }: ProjectModa
               <div className="flex items-center gap-2 sm:gap-3 md:gap-4 flex-1 min-w-0">
                 <div className="px-2 sm:px-3 py-1 bg-orange-500/10 border border-orange-500/20 
                               rounded-lg text-orange-400 text-xs sm:text-sm font-medium">
-                  {project.category}
+                  {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                 </div>
                 <h2 className="text-sm sm:text-lg md:text-xl font-semibold text-white truncate">
                   {project.title}
@@ -247,6 +247,21 @@ export default function ProjectModal({ projectId, isOpen, onClose }: ProjectModa
                     <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
                       {project.description}
                     </p>
+                    {project.highlights && project.highlights.length > 0 && (
+                      <div className="mt-3 sm:mt-4">
+                        <h4 className="text-xs sm:text-sm font-semibold text-white mb-2">
+                          Key strengths
+                        </h4>
+                        <ul className="space-y-1.5 sm:space-y-2">
+                          {project.highlights.map((item, index) => (
+                            <li key={index} className="text-gray-300 text-xs sm:text-sm leading-relaxed">
+                              <span className="text-orange-400 mr-1">•</span>
+                              <span className="font-medium text-white">{item.title}:</span> {item.summary}
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    )}
                   </div>
 
                   {/* Technologies */}

@@ -4,14 +4,14 @@ import React, { useState, useEffect } from 'react';
 import ProjectModal from './ProjectModel';
 import { projects } from '@/app/data/projects';
 
-type FilterType = 'all' | 'web' | 'mobile' | 'design';
+type FilterType = 'all' | 'web' | 'mobile' | 'data' | 'design';
 
 export default function Projects() {
     const [isModalOpen, setIsModalOpen] = useState(false);
     const [selectedProject, setSelectedProject] = useState<number | null>(null);
     const [activeFilter, setActiveFilter] = useState<FilterType>('all');
     const [isLoading, setIsLoading] = useState(true);
-    const [visibleProjects, setVisibleProjects] = useState(6);
+    const [visibleProjects, setVisibleProjects] = useState(9);
 
     useEffect(() => {
         // Simulate loading for smoother UX
@@ -25,7 +25,7 @@ export default function Projects() {
 
     const handleFilterChange = (filter: FilterType) => {
         setActiveFilter(filter);
-        setVisibleProjects(6); // Reset visible projects when filter changes
+        setVisibleProjects(9); // Reset visible projects when filter changes
     };
 
     const loadMoreProjects = () => {
@@ -66,7 +66,7 @@ export default function Projects() {
 
                 {/* Modern Filter Buttons */}
                 <div className="flex flex-wrap items-center justify-center gap-4 mb-16">
-                    {(['all', 'web', 'mobile', 'design'] as FilterType[]).map((filter) => (
+                    {(['all', 'web', 'mobile', 'data', 'design'] as FilterType[]).map((filter) => (
                         <button
                             key={filter}
                             onClick={() => handleFilterChange(filter)}
@@ -80,6 +80,7 @@ export default function Projects() {
                             {filter === 'all' && <span className="w-4 h-4 text-xs">⊞</span>}
                             {filter === 'web' && <span className="w-4 h-4 text-xs">🌐</span>}
                             {filter === 'mobile' && <span className="w-4 h-4 text-xs">📱</span>}
+                            {filter === 'data' && <span className="w-4 h-4 text-xs">📊</span>}
                             {filter === 'design' && <span className="w-4 h-4 text-xs">🎨</span>}
                             
                             {filter.charAt(0).toUpperCase() + filter.slice(1)}
@@ -153,7 +154,7 @@ export default function Projects() {
                                         <div className="absolute top-4 left-4 px-3 py-1.5 
                                                       bg-black/70 backdrop-blur-sm rounded-lg text-xs 
                                                       font-medium text-white/90">
-                                            {project.category}
+                                            {project.category.charAt(0).toUpperCase() + project.category.slice(1)}
                                         </div>
                                         
                                         {/* Status Badge */}

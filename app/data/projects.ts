@@ -2,8 +2,9 @@ export interface Project {
     id: number;
     title: string;
     description: string;
+    highlights?: { title: string; summary: string }[];
     technologies: string[];
-    category: 'web' | 'mobile' | 'design' | 'ai' | 'cybersecurity';
+    category: 'web' | 'mobile' | 'design' | 'data' | 'cybersecurity';
     liveLink?: string;
     githubLink?: string;
     images: string[];
@@ -12,168 +13,120 @@ export interface Project {
 export const projects: Project[] = [
     {
         id: 1,
-        title: "Cyber X Radar – Advanced Threat Detection Platform",
-        description: "A comprehensive real-time cybersecurity platform that monitors dark web activities, data breaches, and vulnerabilities. Provides complete digital risk visibility for organizations with advanced threat intelligence and automated incident response capabilities.",
-        technologies: ["PHP", "Next.js", "Tailwind CSS", "REST API", "MySQL", "JavaScript", "HTML5", "CSS3"],
-        category: "cybersecurity",
-        liveLink: "https://scan.cyberxradar.com/",
-        githubLink: "https://github.com/Mohamedsellak/cyber-x-radar",
+        title: "LexiFlow",
+        description: "LexiFlow is a web-based document analysis and text processing platform designed to collect, normalize, index, search, and visualize textual corpora. The system follows a structured information retrieval pipeline including acquisition, normalization, extraction, indexing, search, and visualization. The goal of the project is to implement explainable algorithms for document processing and to provide an interactive dashboard for exploring analytical results such as word frequency statistics, word clouds, and corpus insights. LexiFlow demonstrates the fundamentals of search engines, text mining, and information visualization.",
+        highlights: [
+            {
+                title: "Structured pipeline",
+                summary: "Covers acquisition, normalization, extraction, indexing, and search in one workflow."
+            },
+            {
+                title: "Explainable processing",
+                summary: "Uses interpretable text processing steps to make results easier to understand."
+            },
+            {
+                title: "Interactive analytics",
+                summary: "Provides dashboard insights like word frequencies, word clouds, and corpus exploration."
+            }
+        ],
+        technologies: ["React.js", "Bootstrap 5", "Python", "Flask", "REST API", "WordCloud", "Text Processing Algorithms", "HTML", "CSS", "JavaScript"],
+        category: "data",
+        githubLink: "https://github.com/AmineBoussaid/LexiFlow",
         images: [
-            "/cyberxradar/1.png",
-            "/cyberxradar/2.png",
-            "/cyberxradar/3.png",
-            "/cyberxradar/4.png",
-            "/cyberxradar/5.png",
-            "/cyberxradar/6.png",
-            "/cyberxradar/7.png",
-            "/cyberxradar/8.png",
-            "/cyberxradar/9.png",
-            "/cyberxradar/10.png",
-            "/cyberxradar/11.png",
-            "/cyberxradar/12.png",
-            "/cyberxradar/13.png",
-            "/cyberxradar/14.png",
-            "/cyberxradar/15.png",
-            "/cyberxradar/16.png",
-            "/cyberxradar/17.png",
-            "/cyberxradar/18.png",
-            "/cyberxradar/19.png",
-            "/cyberxradar/20.png"
+            "/LexiFlow/1.png",
+            "/LexiFlow/2.png",
+            "/LexiFlow/3.png",
+            "/LexiFlow/4.png",
+            "/LexiFlow/5.png",
+            "/LexiFlow/6.png",
+            "/LexiFlow/7.png",
+            "/LexiFlow/8.png",
+            "/LexiFlow/9.png"
         ]
     },
-
-        {
-            id: 2,
-            title: "Pentest GPT – AI-Powered Pentesting Platform",
-            description: "Developed an AI-powered pentesting web application leveraging LLaMA 3, fine-tuned on cybersecurity data, to automate website scans and analyze vulnerabilities. Delivered intelligent recommendations and actionable guidance, helping users remediate security issues efficiently. Integrated a chat-based interface for real-time interaction and consultation on security findings.",
-            technologies: ["Next.js", "Node.js", "Express.js", "Tailwind CSS", "MongoDB", "Linux pentest tools", "LLaMA 3", "AI/ML"],
-            category: "cybersecurity",
-            liveLink: "https://pentestgpt.com",
-            githubLink: "https://github.com/Mohamedsellak/Pentest-Tools-Client",
-            images: [
-                "/pentest/1.png",
-                "/pentest/2.png",
-                "/pentest/3.png",
-                "/pentest/4.png",
-                "/pentest/5.png",
-                "/pentest/6.png",
-                "/pentest/7.png",
-                "/pentest/8.png",
-                "/pentest/9.png",
-                "/pentest/10.png",
-                "/pentest/11.png",
-                "/pentest/12.png",
-                "/pentest/13.png",
-                "/pentest/14.png",
-                "/pentest/15.png",
-                "/pentest/16.png",
-                "/pentest/17.png",
-                "/pentest/18.png"
-            ]
-        },
-
+    {
+        id: 2,
+        title: "OptiTask GIAO",
+        description: "Solution développée pour la RADEEF (Régie Autonome de Distribution d'Eau et d'Électricité de Fès). Conception et développement d'une application web centralisée visant à digitaliser le suivi des interventions techniques. La plateforme permet d'optimiser la gestion des réclamations clients, d'affecter efficacement les équipes sur le terrain et d'analyser les données via des tableaux de bord interactifs.",
+        highlights: [
+            {
+                title: "Suivi centralisé",
+                summary: "Digitalise et centralise le cycle complet des interventions techniques."
+            },
+            {
+                title: "Affectation terrain",
+                summary: "Améliore l'affectation des équipes pour accélérer la prise en charge."
+            },
+            {
+                title: "Pilotage par la donnée",
+                summary: "Fournit des tableaux de bord interactifs pour le suivi des performances."
+            }
+        ],
+        technologies: [
+            "Angular",
+            "TypeScript",
+            "Angular Material",
+            "Bootstrap",
+            "Node.js",
+            "Java",
+            "Spring Boot",
+            "Spring Web",
+            "Spring Data JPA",
+            "Spring Security",
+            "JWT",
+            "MySQL",
+            "Docker",
+            "Docker Compose",
+            "Portainer",
+            "MapStruct",
+            "Lombok",
+            "Swagger",
+            "Maven"
+        ],
+        category: "data",
+        githubLink: "https://github.com/AmineBoussaid/OptiTask-GIAO_Backend",
+        images: [
+            "/OptiTask GIAO/1.png",
+            "/OptiTask GIAO/2.png",
+            "/OptiTask GIAO/3.png",
+            "/OptiTask GIAO/4.png",
+            "/OptiTask GIAO/5.png",
+            "/OptiTask GIAO/6.png",
+            "/OptiTask GIAO/7.png",
+            "/OptiTask GIAO/8.png",
+            "/OptiTask GIAO/9.png",
+            "/OptiTask GIAO/10.png"
+        ]
+    },
     {
         id: 3,
-        title: "Edufacilita – AI-Powered Math Learning Platform",
-        description: "Revolutionary educational platform featuring 5,000+ AI-curated mathematics questions with advanced search capabilities and LaTeX rendering. Currently used by educators across 50+ countries, providing personalized learning experiences and comprehensive analytics.",
-        technologies: ["Laravel", "PHP", "MathJax", "LaTeX", "MathType", "MySQL", "JavaScript", "Tailwind CSS"],
-        category: "ai",
-        liveLink: "https://edufacilita.com.br",
-        githubLink: "https://github.com/Mohamedsellak/Edufacilita",
-        images: [
-            "/Edufacilita/1.png",
-            "/Edufacilita/2.png",
-            "/Edufacilita/3.png",
-            "/Edufacilita/4.png",
-            "/Edufacilita/5.png",
-            "/Edufacilita/6.png",
-            "/Edufacilita/7.png",
-            "/Edufacilita/8.png",
-            "/Edufacilita/9.png",
-            "/Edufacilita/10.png",
-            "/Edufacilita/11.png",
-            "/Edufacilita/12.png",
-            "/Edufacilita/13.png",
-            "/Edufacilita/14.png",
-            "/Edufacilita/15.png"
-        ]
-    },
-    {
-        id: 4,
-        title: "AI Translator - Go Translate",
-        description: "Comprehensive AI-powered translation application supporting 100+ languages. Features voice translation, image text recognition, document translation, and real-time conversation mode. Built with advanced machine learning for accurate and contextual translations.",
-        technologies: ["Swift", "iOS SDK", "Core ML", "Vision API", "Speech Recognition", "Google Translate API"],
+        title: "PrestaLink",
+        description: "A mobile service and booking management application that connects clients with service providers. It includes advanced search and filtering, real-time booking tracking, automatic notifications, and a review system to build trust.",
+        highlights: [
+            {
+                title: "Mise en relation rapide",
+                summary: "Recherche et filtrage des prestataires par service, localisation et évaluation."
+            },
+            {
+                title: "Suivi des réservations",
+                summary: "Gestion de l'état des demandes et rappels automatiques via notifications."
+            },
+            {
+                title: "Confiance et qualité",
+                summary: "Système de notation et commentaires post-service pour améliorer la réputation."
+            }
+        ],
+        technologies: ["React Native", "Expo", "Node.js", "Express.js", "MongoDB"],
         category: "mobile",
-        liveLink: "https://apps.apple.com/us/app/ai-translator-go-translate/id6747006001",
-        githubLink: "https://github.com/Mohamedsellak/Ai-Translation",
+        githubLink: "https://github.com/DUNCANtTALL/Pfa",
         images: [
-            "/ai translate/1.png",
-            "/ai translate/2.png",
-            "/ai translate/3.png",
-            "/ai translate/4.png",
-            "/ai translate/5.png",
-            "/ai translate/6.png"
-        ]
-    },
-    {
-        id: 5,
-        title: "NextTrade - Advanced Trading Platform",
-        description: "Professional cryptocurrency and stock trading platform with real-time market data, advanced charting tools, portfolio management, and automated trading strategies. Features secure transactions, multi-wallet support, and comprehensive analytics dashboard.",
-        technologies: ["Next.js", "TypeScript", "Node.js", "WebSocket", "MongoDB", "Redis", "Chart.js", "Crypto Payment API"],
-        category: "web",
-        githubLink: "https://github.com/Mohamedsellak/webTrade-client",
-        images: [
-            "/nextTrade/1..png",
-            "/nextTrade/2.png",
-            "/nextTrade/3.png",
-            "/nextTrade/4.png",
-            "/nextTrade/5.png",
-            "/nextTrade/6.png",
-            "/nextTrade/7.png",
-            "/nextTrade/8.png",
-            "/nextTrade/9.jpeg",
-            "/nextTrade/10.jpeg",
-            "/nextTrade/11.jpeg",
-            "/nextTrade/12.jpeg",
-            "/nextTrade/13.jpeg",
-            "/nextTrade/14.jpeg",
-            "/nextTrade/15.jpeg",
-            "/nextTrade/16.jpeg",
-            "/nextTrade/17.jpeg",
-            "/nextTrade/18.jpeg"
-        ]
-    },
-    {
-        id: 6,
-        title: "Mr. Basit's Authentic Moroccan Crafts",
-        description: "Premium e-commerce platform showcasing authentic Moroccan handicrafts and traditional artistry. Features secure payment processing, inventory management, international shipping, and cultural storytelling to connect customers with Moroccan heritage.",
-        technologies: ["Next.js", "TypeScript", "Tailwind CSS", "Stripe", "MongoDB", "Node.js"],
-        category: "web",
-        liveLink: "https://mr-basit.netlify.app/",
-        githubLink: "https://github.com/Mohamedsellak/mr-basit",
-        images: [
-            "/mr-basit/1.png",
-            "/mr-basit/2.png",
-            "/mr-basit/3.png",
-            "/mr-basit/4.png",
-            "/mr-basit/5.png"
-        ]
-    },
-    {
-        id: 7,
-        title: "TechStore - Premium Technology Marketplace",
-        description: "Sophisticated French e-commerce platform specializing in premium technology products. Serves 50,000+ satisfied customers across 15+ countries with 24/7 support. Features advanced product filtering, AR product visualization, and comprehensive customer service system.",
-        technologies: ["Next.js", "Supabase", "PostgreSQL", "Tailwind CSS", "TypeScript", "Stripe API"], 
-        category: "web",
-        liveLink: "https://teechstore.netlify.app/",
-        githubLink: "https://github.com/Mohamedsellak/COD-Store",
-        images: [
-            "/tech store/1.png",
-            "/tech store/2.png",
-            "/tech store/3.png",
-            "/tech store/4.png",
-            "/tech store/5.png",
-            "/tech store/6.png"
+            "/PrestaLink/1.png",
+            "/PrestaLink/2.png",
+            "/PrestaLink/3.png",
+            "/PrestaLink/4.png",
+            "/PrestaLink/5.png",
+            "/PrestaLink/6.png",
+            "/PrestaLink/7.png"
         ]
     }
 ];
