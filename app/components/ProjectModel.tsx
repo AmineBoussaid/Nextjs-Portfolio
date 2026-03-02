@@ -247,6 +247,11 @@ export default function ProjectModal({ projectId, isOpen, onClose }: ProjectModa
                     <p className="text-gray-300 leading-relaxed text-xs sm:text-sm">
                       {project.description}
                     </p>
+                    {project.meta && (
+                      <p className="text-gray-400 leading-relaxed text-xs sm:text-sm mt-2 sm:mt-3">
+                        {project.meta}
+                      </p>
+                    )}
                     {project.highlights && project.highlights.length > 0 && (
                       <div className="mt-3 sm:mt-4">
                         <h4 className="text-xs sm:text-sm font-semibold text-white mb-2">

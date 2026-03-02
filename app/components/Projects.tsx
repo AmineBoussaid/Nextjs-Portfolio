@@ -211,6 +211,12 @@ export default function Projects() {
                                             {project.description}
                                         </p>
 
+                                        {project.meta && (
+                                            <p className="text-gray-500 text-xs leading-relaxed mb-4 line-clamp-2">
+                                                {project.meta}
+                                            </p>
+                                        )}
+
                                         {/* Tech Stack */}
                                         <div className="flex flex-wrap gap-2 mb-6">
                                             {project.technologies.length > 0 ? (

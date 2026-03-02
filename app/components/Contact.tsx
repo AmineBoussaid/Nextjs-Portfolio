@@ -24,18 +24,6 @@ export default function Contact() {
                   </div>
 
                   <div className="w-full rounded-lg bg-gray-800/50 border-b-orange-700 border-b-4  p-8">
-                      <i className="fa-brands fa-whatsapp text-2xl"></i>
-
-                      <h3 className="font-bold text-xl">WhatsApp</h3>
-
-                      <span className="contact_card-data">+212 696 165 421</span>
-
-                      <a href="https://wa.me/212696165421" target="_blank" className="flex items-center justify-center gap-3 text-orange-700 mt-4">
-                          Write Me <i className="fas fa-arrow-alt-circle-right"></i>
-                      </a>
-                  </div>
-
-                  <div className="w-full rounded-lg bg-gray-800/50 border-b-orange-700 border-b-4  p-8">
                       <i className="fa-brands fa-linkedin text-2xl"></i>
 
                       <h3 className="font-bold text-xl">Linkedin</h3>

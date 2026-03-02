@@ -2,6 +2,7 @@ export interface Project {
     id: number;
     title: string;
     description: string;
+    meta?: string;
     highlights?: { title: string; summary: string }[];
     technologies: string[];
     category: 'web' | 'mobile' | 'design' | 'data' | 'cybersecurity';
@@ -47,19 +48,19 @@ export const projects: Project[] = [
     {
         id: 2,
         title: "OptiTask GIAO",
-        description: "Solution développée pour la RADEEF (Régie Autonome de Distribution d'Eau et d'Électricité de Fès). Conception et développement d'une application web centralisée visant à digitaliser le suivi des interventions techniques. La plateforme permet d'optimiser la gestion des réclamations clients, d'affecter efficacement les équipes sur le terrain et d'analyser les données via des tableaux de bord interactifs.",
+        description: "Solution developed for RADEEF (Autonomous Water and Electricity Distribution Authority of Fez). Design and development of a centralized web application to digitize technical intervention tracking. The platform optimizes customer complaint management, improves field team assignment, and analyzes operations through interactive dashboards.",
         highlights: [
             {
-                title: "Suivi centralisé",
-                summary: "Digitalise et centralise le cycle complet des interventions techniques."
+                title: "Centralized tracking",
+                summary: "Digitizes and centralizes the full lifecycle of technical interventions."
             },
             {
-                title: "Affectation terrain",
-                summary: "Améliore l'affectation des équipes pour accélérer la prise en charge."
+                title: "Field assignment",
+                summary: "Improves team assignment to accelerate response times."
             },
             {
-                title: "Pilotage par la donnée",
-                summary: "Fournit des tableaux de bord interactifs pour le suivi des performances."
+                title: "Data-driven operations",
+                summary: "Provides interactive dashboards for performance monitoring."
             }
         ],
         technologies: [
@@ -104,16 +105,16 @@ export const projects: Project[] = [
         description: "A mobile service and booking management application that connects clients with service providers. It includes advanced search and filtering, real-time booking tracking, automatic notifications, and a review system to build trust.",
         highlights: [
             {
-                title: "Mise en relation rapide",
-                summary: "Recherche et filtrage des prestataires par service, localisation et évaluation."
+                title: "Fast matching",
+                summary: "Searches and filters providers by service, location, and rating."
             },
             {
-                title: "Suivi des réservations",
-                summary: "Gestion de l'état des demandes et rappels automatiques via notifications."
+                title: "Booking tracking",
+                summary: "Manages request statuses and automatic reminder notifications."
             },
             {
-                title: "Confiance et qualité",
-                summary: "Système de notation et commentaires post-service pour améliorer la réputation."
+                title: "Trust and quality",
+                summary: "Rating and post-service review system to strengthen provider reputation."
             }
         ],
         technologies: ["React Native", "Expo", "Node.js", "Express.js", "MongoDB"],
@@ -127,6 +128,57 @@ export const projects: Project[] = [
             "/PrestaLink/5.png",
             "/PrestaLink/6.png",
             "/PrestaLink/7.png"
+        ]
+    },
+    {
+        id: 4,
+        title: "PeerConnect — Modern Scientific Peer Review Platform",
+        description: "PeerConnect is a multi-role SaaS application that digitizes the full scientific review lifecycle: submission, assignment, expert review, and editorial decision. The platform centralizes collaboration between Admin, Author, and Reviewer in a single, clear, and traceable workflow. It enables teams to manage papers, track assignments, submit structured evaluations, and drive final decisions. The goal is to improve the quality, transparency, and speed of the peer-review process.",
+        meta: "Type: Full-stack web app • Status: Production-ready UI • Role: Design & Development",
+        highlights: [
+            {
+                title: "User roles",
+                summary: "Admin drives the workflow, Author submits and tracks papers, Reviewer evaluates and recommends decisions."
+            },
+            {
+                title: "Role-based authentication",
+                summary: "Differentiated access by user profile with a clear permission hierarchy."
+            },
+            {
+                title: "Peer-review workflow",
+                summary: "Paper submission, reviewer assignment, status tracking, and editorial decision in one unified flow."
+            },
+            {
+                title: "Structured evaluation",
+                summary: "Multi-criteria form covering quality, originality, clarity, and final recommendation."
+            },
+            {
+                title: "Architecture modulaire",
+                summary: "Structured routing (public, auth, dashboard) and coherent components for a maintainable application."
+            },
+            {
+                title: "Impact",
+                summary: "Reduces peer-review friction, improves status visibility, and accelerates editorial decision-making."
+            }
+        ],
+        technologies: ["Angular", "Tailwind CSS", "Node.js", "Express.js", "MySQL"],
+        category: "web",
+        githubLink: "https://github.com/AmineBoussaid/Peer-Connect",
+        images: [
+            "/PeerConnect/1.png",
+            "/PeerConnect/2.png",
+            "/PeerConnect/3.png",
+            "/PeerConnect/4.png",
+            "/PeerConnect/5.png",
+            "/PeerConnect/6.png",
+            "/PeerConnect/7.png",
+            "/PeerConnect/8.png",
+            "/PeerConnect/9.png",
+            "/PeerConnect/10.png",
+            "/PeerConnect/11.png",
+            "/PeerConnect/12.png",
+            "/PeerConnect/13.png",
+            "/PeerConnect/14.png"
         ]
     }
 ];
