@@ -134,7 +134,6 @@ export const projects: Project[] = [
         id: 4,
         title: "PeerConnect — Modern Scientific Peer Review Platform",
         description: "PeerConnect is a multi-role SaaS application that digitizes the full scientific review lifecycle: submission, assignment, expert review, and editorial decision. The platform centralizes collaboration between Admin, Author, and Reviewer in a single, clear, and traceable workflow. It enables teams to manage papers, track assignments, submit structured evaluations, and drive final decisions. The goal is to improve the quality, transparency, and speed of the peer-review process.",
-        meta: "Type: Full-stack web app • Status: Production-ready UI • Role: Design & Development",
         highlights: [
             {
                 title: "User roles",
@@ -179,6 +178,36 @@ export const projects: Project[] = [
             "/PeerConnect/12.png",
             "/PeerConnect/13.png",
             "/PeerConnect/14.png"
+        ]
+    },
+    {
+        id: 5,
+        title: "IoT Monitoring Microservices",
+        description: "Cloud-native IoT monitoring platform built on a scalable microservices architecture. The system collects, processes, and visualizes real-time data from distributed IoT devices with strong decoupling, resilience, and performance.",
+        meta: "Type: Microservices platform • Architecture: Cloud-native • Focus: Real-time monitoring",
+        highlights: [
+            {
+                title: "Scalable microservices design",
+                summary: "Clear service boundaries with independent deployment and evolution."
+            },
+            {
+                title: "Asynchronous communication",
+                summary: "Reliable event-driven exchanges between services via RabbitMQ."
+            },
+            {
+                title: "Real-time observability",
+                summary: "Live IoT data streaming and monitoring through Socket.IO."
+            },
+            {
+                title: "Containerized and orchestrated",
+                summary: "Docker-based deployment with Kubernetes (microk8s) orchestration."
+            }
+        ],
+        technologies: ["Flask", "PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Socket.IO", "Docker", "Kubernetes"],
+        category: "data",
+        githubLink: "https://github.com/AmineBoussaid/IoT-Monitoring-Microservices",
+        images: [
+            "/IoT Monitoring Microservices/1.png"
         ]
     }
 ];
