@@ -16,6 +16,7 @@ export const projects: Project[] = [
         id: 1,
         title: "LexiFlow",
         description: "LexiFlow is a web-based document analysis and text processing platform designed to collect, normalize, index, search, and visualize textual corpora. The system follows a structured information retrieval pipeline including acquisition, normalization, extraction, indexing, search, and visualization. The goal of the project is to implement explainable algorithms for document processing and to provide an interactive dashboard for exploring analytical results such as word frequency statistics, word clouds, and corpus insights. LexiFlow demonstrates the fundamentals of search engines, text mining, and information visualization.",
+        meta: "Type: Data platform • Architecture: Modular web app • Focus: Text analytics and information retrieval",
         highlights: [
             {
                 title: "Structured pipeline",
@@ -49,6 +50,7 @@ export const projects: Project[] = [
         id: 2,
         title: "OptiTask GIAO",
         description: "Solution developed for RADEEF (Autonomous Water and Electricity Distribution Authority of Fez). Design and development of a centralized web application to digitize technical intervention tracking. The platform optimizes customer complaint management, improves field team assignment, and analyzes operations through interactive dashboards.",
+        meta: "Type: Operations platform • Architecture: Full-stack enterprise app • Focus: Intervention tracking and service optimization",
         highlights: [
             {
                 title: "Centralized tracking",
@@ -103,6 +105,7 @@ export const projects: Project[] = [
         id: 3,
         title: "PrestaLink",
         description: "A mobile service and booking management application that connects clients with service providers. It includes advanced search and filtering, real-time booking tracking, automatic notifications, and a review system to build trust.",
+        meta: "Type: Mobile platform • Architecture: Client-server app • Focus: Service booking and provider matching",
         highlights: [
             {
                 title: "Fast matching",
@@ -134,6 +137,7 @@ export const projects: Project[] = [
         id: 4,
         title: "PeerConnect — Modern Scientific Peer Review Platform",
         description: "PeerConnect is a multi-role SaaS application that digitizes the full scientific review lifecycle: submission, assignment, expert review, and editorial decision. The platform centralizes collaboration between Admin, Author, and Reviewer in a single, clear, and traceable workflow. It enables teams to manage papers, track assignments, submit structured evaluations, and drive final decisions. The goal is to improve the quality, transparency, and speed of the peer-review process.",
+        meta: "Type: SaaS platform • Architecture: Role-based full-stack app • Focus: Scientific peer-review workflow",
         highlights: [
             {
                 title: "User roles",
@@ -183,27 +187,31 @@ export const projects: Project[] = [
     {
         id: 5,
         title: "IoT Monitoring Microservices",
-        description: "Cloud-native IoT monitoring platform built on a scalable microservices architecture. The system collects, processes, and visualizes real-time data from distributed IoT devices with strong decoupling, resilience, and performance.",
-        meta: "Type: Microservices platform • Architecture: Cloud-native • Focus: Real-time monitoring",
+        description: "Cloud-native IoT monitoring platform built with three independent Flask microservices: Signing, Device Management, and Monitoring. The system ingests device events through RabbitMQ, stores telemetry in MongoDB/PostgreSQL, and exposes live updates via Socket.IO with analytics endpoints for history and operational stats.",
+        meta: "Type: Microservices platform • Architecture: Event-driven cloud-native • Focus: Real-time IoT observability",
         highlights: [
             {
-                title: "Scalable microservices design",
-                summary: "Clear service boundaries with independent deployment and evolution."
+                title: "Three-service architecture",
+                summary: "Signing, Device Management, and Monitoring services are decoupled for independent scaling and deployment."
             },
             {
-                title: "Asynchronous communication",
-                summary: "Reliable event-driven exchanges between services via RabbitMQ."
+                title: "Secure access layer",
+                summary: "JWT-based authentication with Redis-backed session handling and Swagger-documented auth endpoints."
             },
             {
-                title: "Real-time observability",
-                summary: "Live IoT data streaming and monitoring through Socket.IO."
+                title: "Event-driven data pipeline",
+                summary: "RabbitMQ transports device events to monitoring consumers for persistence and live broadcasting."
             },
             {
-                title: "Containerized and orchestrated",
-                summary: "Docker-based deployment with Kubernetes (microk8s) orchestration."
+                title: "Real-time monitoring APIs",
+                summary: "Socket.IO live feed plus dedicated history and stats endpoints for device observability."
+            },
+            {
+                title: "Deployment readiness",
+                summary: "Dockerized services with Kubernetes (microk8s) orchestration and IoT event simulation scripts."
             }
         ],
-        technologies: ["Flask", "PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Socket.IO", "Docker", "Kubernetes"],
+        technologies: ["Python", "React.js", "Flask", "Flask-CORS", "Flask-JWT-Extended", "Flask-Session", "Flask-SQLAlchemy", "Flask-SocketIO", "Flasgger", "PostgreSQL", "MongoDB", "Redis", "RabbitMQ", "Pika", "MQTT", "Docker", "Kubernetes"],
         category: "data",
         githubLink: "https://github.com/AmineBoussaid/IoT-Monitoring-Microservices",
         images: [
